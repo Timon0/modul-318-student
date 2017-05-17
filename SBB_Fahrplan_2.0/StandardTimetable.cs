@@ -28,6 +28,11 @@ namespace SBB_Fahrplan_2._0
 
         private void searchConnectionButton_Click(object sender, EventArgs e)
         {
+            if (!validateInput())
+            {
+                return;
+            }
+
             ConnectionConverter connectionKonverter = new ConnectionConverter();
             var connections = transport.GetConnections(fromComboBox.Text, toComboBox.Text);
             BindingList<ConnectionRow> connectionRows = new BindingList<ConnectionRow>();
@@ -45,6 +50,27 @@ namespace SBB_Fahrplan_2._0
             timetableDataGridView.Visible = true;
 
 
+        }
+
+        private bool validateInput()
+        {
+            string errors = "";
+            if (!StationSearchHelper.stationExsits(fromComboBox.Text))
+            {
+                errors += "Departurestation not found!\n";
+            }
+            if (!StationSearchHelper.stationExsits(toComboBox.Text))
+            {
+                errors += "Arrivalstation not found!\n";
+            }
+
+            if(errors.Length > 0)
+            {
+                MessageBox.Show(errors, "Validationerror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
 }

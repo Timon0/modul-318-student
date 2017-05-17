@@ -29,7 +29,7 @@ namespace SBB_Fahrplan_2._0
         {
             if (!StationSearchHelper.stationExsits(stationComboBox.Text))
             {
-                MessageBox.Show("Die Station wurde nicht gefunden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Station not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
