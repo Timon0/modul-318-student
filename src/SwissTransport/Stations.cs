@@ -28,9 +28,6 @@ namespace SwissTransport
 
         [JsonProperty("coordinate")]
         public Coordinate Coordinate { get; set; }
-
-        [JsonProperty("distance")]
-        public double? Distance { get; set; }
     }
 
     public class Stations
