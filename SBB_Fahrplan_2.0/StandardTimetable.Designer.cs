@@ -30,14 +30,15 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchConnectionButton = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.fromComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.fromStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.toStationSearch = new SBB_Fahrplan_2._0.StationSearch();
+            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -47,8 +48,10 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.timePicker);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.searchConnectionButton);
-            this.groupBox1.Controls.Add(this.dateTimePicker);
+            this.groupBox1.Controls.Add(this.datePicker);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -73,15 +76,16 @@
             this.searchConnectionButton.UseVisualStyleBackColor = true;
             this.searchConnectionButton.Click += new System.EventHandler(this.searchConnectionButton_Click);
             // 
-            // dateTimePicker
+            // datePicker
             // 
-            this.dateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker.Location = new System.Drawing.Point(13, 128);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(358, 26);
-            this.dateTimePicker.TabIndex = 3;
+            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datePicker.Location = new System.Drawing.Point(13, 128);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(358, 26);
+            this.datePicker.TabIndex = 3;
             // 
             // label4
             // 
@@ -94,18 +98,6 @@
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Date";
-            // 
-            // fromComboBox
-            // 
-            this.fromComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fromComboBox.FormattingEnabled = true;
-            this.fromComboBox.Location = new System.Drawing.Point(255, 444);
-            this.fromComboBox.Name = "fromComboBox";
-            this.fromComboBox.Size = new System.Drawing.Size(360, 28);
-            this.fromComboBox.TabIndex = 1;
-            this.fromComboBox.TextChanged += new System.EventHandler(this.stationSearch_TextChanged);
             // 
             // label2
             // 
@@ -131,6 +123,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "From";
             // 
+            // fromStationSearch
+            // 
+            this.fromStationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.fromStationSearch.Location = new System.Drawing.Point(13, 59);
+            this.fromStationSearch.Name = "fromStationSearch";
+            this.fromStationSearch.Size = new System.Drawing.Size(360, 203);
+            this.fromStationSearch.TabIndex = 7;
+            // 
+            // toStationSearch
+            // 
+            this.toStationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.toStationSearch.Location = new System.Drawing.Point(422, 60);
+            this.toStationSearch.Name = "toStationSearch";
+            this.toStationSearch.Size = new System.Drawing.Size(360, 203);
+            this.toStationSearch.TabIndex = 8;
+            // 
             // timetableDataGridView
             // 
             this.timetableDataGridView.AllowUserToAddRows = false;
@@ -149,21 +157,30 @@
             this.timetableDataGridView.Size = new System.Drawing.Size(1308, 341);
             this.timetableDataGridView.TabIndex = 5;
             // 
-            // fromStationSearch
+            // label3
             // 
-            this.fromStationSearch.BackColor = System.Drawing.Color.Transparent;
-            this.fromStationSearch.Location = new System.Drawing.Point(13, 60);
-            this.fromStationSearch.Name = "fromStationSearch";
-            this.fromStationSearch.Size = new System.Drawing.Size(360, 203);
-            this.fromStationSearch.TabIndex = 7;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(418, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Time";
             // 
-            // toStationSearch
+            // timePicker
             // 
-            this.toStationSearch.BackColor = System.Drawing.Color.Transparent;
-            this.toStationSearch.Location = new System.Drawing.Point(422, 60);
-            this.toStationSearch.Name = "toStationSearch";
-            this.toStationSearch.Size = new System.Drawing.Size(360, 203);
-            this.toStationSearch.TabIndex = 8;
+            this.timePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timePicker.CustomFormat = "HH:mm";
+            this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timePicker.Location = new System.Drawing.Point(424, 128);
+            this.timePicker.Name = "timePicker";
+            this.timePicker.ShowUpDown = true;
+            this.timePicker.Size = new System.Drawing.Size(358, 26);
+            this.timePicker.TabIndex = 10;
             // 
             // StandardTimetable
             // 
@@ -172,7 +189,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.timetableDataGridView);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.fromComboBox);
             this.Name = "StandardTimetable";
             this.Size = new System.Drawing.Size(1390, 700);
             this.groupBox1.ResumeLayout(false);
@@ -187,12 +203,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox fromComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.DataGridView timetableDataGridView;
         private System.Windows.Forms.Button searchConnectionButton;
         private StationSearch fromStationSearch;
         private StationSearch toStationSearch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker timePicker;
     }
 }

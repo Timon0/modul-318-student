@@ -20,11 +20,6 @@ namespace SBB_Fahrplan_2._0
             stationSearch.Focus();
         }
 
-        private void stationSearch_TextChanged(object sender, EventArgs e)
-        {
-            StationSearchHelper.searchStation((ComboBox)sender);
-        }
-
         private void searchConnectionButton_Click(object sender, EventArgs e)
         {
             if (!stationSearch.isValidStation())

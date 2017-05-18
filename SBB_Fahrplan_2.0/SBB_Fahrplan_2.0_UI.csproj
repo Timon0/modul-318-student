@@ -76,7 +76,6 @@
     <Compile Include="StationTimetable.Designer.cs">
       <DependentUpon>StationTimetable.cs</DependentUpon>
     </Compile>
-    <Compile Include="StationSearchHelper.cs" />
     <EmbeddedResource Include="OverviewForm.resx">
       <DependentUpon>OverviewForm.cs</DependentUpon>
     </EmbeddedResource>
