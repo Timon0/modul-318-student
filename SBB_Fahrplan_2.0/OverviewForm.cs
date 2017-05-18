@@ -33,5 +33,13 @@ namespace SBB_Fahrplan_2._0
             stationTimetable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             userControlPanel.Controls.Add(stationTimetable);
         }
+
+        private void searchStationsButton_Click(object sender, EventArgs e)
+        {
+            userControlPanel.Controls.Clear();
+            var stationsNearby = new StationsNearby();
+            stationsNearby.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            userControlPanel.Controls.Add(stationsNearby);
+        }
     }
 }

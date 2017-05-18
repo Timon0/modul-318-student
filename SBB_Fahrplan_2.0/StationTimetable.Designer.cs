@@ -97,9 +97,10 @@
             // stationSearch
             // 
             this.stationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.stationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stationSearch.Location = new System.Drawing.Point(11, 60);
             this.stationSearch.Name = "stationSearch";
-            this.stationSearch.Size = new System.Drawing.Size(360, 203);
+            this.stationSearch.Size = new System.Drawing.Size(423, 203);
             this.stationSearch.TabIndex = 3;
             // 
             // StationTimetable

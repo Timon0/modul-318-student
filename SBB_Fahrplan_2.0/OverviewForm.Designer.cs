@@ -31,12 +31,13 @@
             this.standardTimetableButton = new System.Windows.Forms.Button();
             this.stationFahrplanButton = new System.Windows.Forms.Button();
             this.userControlPanel = new System.Windows.Forms.Panel();
+            this.searchStationsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // standardTimetableButton
             // 
             this.standardTimetableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.standardTimetableButton.Location = new System.Drawing.Point(372, 21);
+            this.standardTimetableButton.Location = new System.Drawing.Point(254, 21);
             this.standardTimetableButton.Name = "standardTimetableButton";
             this.standardTimetableButton.Size = new System.Drawing.Size(247, 88);
             this.standardTimetableButton.TabIndex = 0;
@@ -47,7 +48,7 @@
             // stationFahrplanButton
             // 
             this.stationFahrplanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stationFahrplanButton.Location = new System.Drawing.Point(710, 21);
+            this.stationFahrplanButton.Location = new System.Drawing.Point(531, 21);
             this.stationFahrplanButton.Name = "stationFahrplanButton";
             this.stationFahrplanButton.Size = new System.Drawing.Size(247, 88);
             this.stationFahrplanButton.TabIndex = 1;
@@ -65,12 +66,24 @@
             this.userControlPanel.Size = new System.Drawing.Size(1390, 700);
             this.userControlPanel.TabIndex = 2;
             // 
+            // searchStationsButton
+            // 
+            this.searchStationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchStationsButton.Location = new System.Drawing.Point(804, 21);
+            this.searchStationsButton.Name = "searchStationsButton";
+            this.searchStationsButton.Size = new System.Drawing.Size(247, 88);
+            this.searchStationsButton.TabIndex = 3;
+            this.searchStationsButton.Text = "Search stations nearby";
+            this.searchStationsButton.UseVisualStyleBackColor = true;
+            this.searchStationsButton.Click += new System.EventHandler(this.searchStationsButton_Click);
+            // 
             // OverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1378, 838);
+            this.Controls.Add(this.searchStationsButton);
             this.Controls.Add(this.userControlPanel);
             this.Controls.Add(this.stationFahrplanButton);
             this.Controls.Add(this.standardTimetableButton);
@@ -86,6 +99,7 @@
         private System.Windows.Forms.Button standardTimetableButton;
         private System.Windows.Forms.Button stationFahrplanButton;
         private System.Windows.Forms.Panel userControlPanel;
+        private System.Windows.Forms.Button searchStationsButton;
     }
 }
 

@@ -12,6 +12,10 @@ namespace SBB_Fahrplan_2._0
     {
         public ConnectionRow toConnectionRow(Connection connection)
         {
+            if(connection == null)
+            {
+                return null;
+            }
             ConnectionRow connectionRow = new ConnectionRow();
 
             connectionRow.From = connection.From.Station.Name;

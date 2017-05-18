@@ -93,12 +93,20 @@
     </Compile>
     <Compile Include="StationBoardConverter.cs" />
     <Compile Include="StationBoardRow.cs" />
+    <Compile Include="StationsNearby.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StationsNearby.Designer.cs">
+      <DependentUpon>StationsNearby.cs</DependentUpon>
+    </Compile>
     <Compile Include="StationSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="StationSearch.Designer.cs">
       <DependentUpon>StationSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="StationsNearbyConverter.cs" />
+    <Compile Include="StationsNearbyRow.cs" />
     <Compile Include="StationTimetable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="StandardTimetable.resx">
       <DependentUpon>StandardTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationsNearby.resx">
+      <DependentUpon>StationsNearby.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StationSearch.resx">
       <DependentUpon>StationSearch.cs</DependentUpon>
