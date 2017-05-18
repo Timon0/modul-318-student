@@ -28,10 +28,10 @@ namespace SBB_Fahrplan_2._0
                 return;
             }
 
-            var stations = transport.GetStations(stationSearch.getStation());
+            var stations = transport.GetStations(stationSearch.getStation().Name);
             foreach(Station station in stations.StationList)
             {
-                if(station.Name == stationSearch.getStation())
+                if(station.Name == stationSearch.getStation().Name)
                 {
                     var stationsBoards = transport.GetStationBoard(station.Name, station.Id);
                     BindingList<StationBoardRow> stationBoardRows = new BindingList<StationBoardRow>();

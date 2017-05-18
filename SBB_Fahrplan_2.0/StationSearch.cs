@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SwissTransport;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace SBB_Fahrplan_2._0
 {
@@ -55,24 +56,28 @@ namespace SBB_Fahrplan_2._0
 
         public bool isValidStation()
         {
+            if (getStation() == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public Station getStation()
+        {
             var stations = transport.GetStations(searchTextBox.Text);
             if (stations == null)
             {
-                return false;
+                return null;
             }
             foreach (var station in stations.StationList)
             {
                 if (station.Name == searchTextBox.Text)
                 {
-                    return true;
+                    return station;
                 }
             }
-            return false;
-        }
-
-        public String getStation()
-        {
-            return searchTextBox.Text;
+            return null;
         }
 
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -111,6 +116,22 @@ namespace SBB_Fahrplan_2._0
             searchTextBox.Text = suggestionListBox.SelectedItem.ToString();
             suggestionListBox.Visible = false;
             this.SendToBack();
+        }
+
+        private void showStationButton_Click(object sender, EventArgs e)
+        {
+            if (!isValidStation())
+            {
+                MessageBox.Show("Station not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            NumberFormatInfo numberFormatInfo = new NumberFormatInfo();
+            numberFormatInfo.NumberDecimalSeparator = ".";
+
+            string coordinates = getStation().Coordinate.XCoordinate.ToString(numberFormatInfo) + "," + getStation().Coordinate.YCoordinate.ToString(numberFormatInfo);
+            string url = "http://www.google.com/maps?q=" + coordinates;
+
+            System.Diagnostics.Process.Start(url);
         }
     }
 }

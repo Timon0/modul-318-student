@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StationSearch));
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.suggestionListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.showStationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchTextBox
@@ -59,24 +60,27 @@
             this.suggestionListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.suggestionListBox_KeyDown);
             this.suggestionListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.suggestionListBox_MouseDoubleClick);
             // 
-            // button1
+            // showStationButton
             // 
-            this.button1.Location = new System.Drawing.Point(374, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.showStationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.showStationButton.Image = ((System.Drawing.Image)(resources.GetObject("showStationButton.Image")));
+            this.showStationButton.Location = new System.Drawing.Point(370, 0);
+            this.showStationButton.Name = "showStationButton";
+            this.showStationButton.Size = new System.Drawing.Size(53, 51);
+            this.showStationButton.TabIndex = 2;
+            this.showStationButton.UseVisualStyleBackColor = true;
+            this.showStationButton.Click += new System.EventHandler(this.showStationButton_Click);
             // 
             // StationSearch
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.button1);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.showStationButton);
             this.Controls.Add(this.suggestionListBox);
             this.Controls.Add(this.searchTextBox);
             this.Name = "StationSearch";
-            this.Size = new System.Drawing.Size(452, 203);
+            this.Size = new System.Drawing.Size(423, 203);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +90,6 @@
 
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.ListBox suggestionListBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button showStationButton;
     }
 }
