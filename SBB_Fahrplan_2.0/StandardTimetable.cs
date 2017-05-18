@@ -18,7 +18,7 @@ namespace SBB_Fahrplan_2._0
         public StandardTimetable()
         {
             InitializeComponent();
-            fromComboBox.Focus();
+            fromStationSearch.Focus();
         }
 
         private void stationSearch_TextChanged(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace SBB_Fahrplan_2._0
             }
 
             ConnectionConverter connectionKonverter = new ConnectionConverter();
-            var connections = transport.GetConnections(fromComboBox.Text, toComboBox.Text);
+            var connections = transport.GetConnections(fromStationSearch.getStation(), toStationSearch.getStation());
             BindingList<ConnectionRow> connectionRows = new BindingList<ConnectionRow>();
             foreach (Connection connection in connections.ConnectionList)
             {
@@ -59,12 +59,12 @@ namespace SBB_Fahrplan_2._0
             {
                 errors += "Departurestation not found!\n";
             }
-            if (!StationSearchHelper.stationExsits(toComboBox.Text))
+            if (!StationSearchHelper.stationExsits(toStationSearch.getStation()))
             {
                 errors += "Arrivalstation not found!\n";
             }
 
-            if(errors.Length > 0)
+            if (errors.Length > 0)
             {
                 MessageBox.Show(errors, "Validationerror", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

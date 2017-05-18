@@ -7,7 +7,7 @@
     <ProjectGuid>{AC221644-5895-4717-9FF4-1799C479A3F8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SBB_Fahrplan_2._0</RootNamespace>
-    <AssemblyName>SBB_Fahrplan_2.0</AssemblyName>
+    <AssemblyName>SBB_Fahrplan_2.0_UI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +64,12 @@
     </Compile>
     <Compile Include="StationBoardConverter.cs" />
     <Compile Include="StationBoardRow.cs" />
+    <Compile Include="StationSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StationSearch.Designer.cs">
+      <DependentUpon>StationSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="StationTimetable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="StandardTimetable.resx">
       <DependentUpon>StandardTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationSearch.resx">
+      <DependentUpon>StationSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StationTimetable.resx">
       <DependentUpon>StationTimetable.cs</DependentUpon>

@@ -75,6 +75,7 @@
             this.Controls.Add(this.stationFahrplanButton);
             this.Controls.Add(this.standardTimetableButton);
             this.Name = "OverviewForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SBB Timetable 2.0";
             this.ResumeLayout(false);
 

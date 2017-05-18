@@ -30,9 +30,9 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchConnectionButton = new System.Windows.Forms.Button();
-            this.stationComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timetableDataGridView = new System.Windows.Forms.DataGridView();
+            this.stationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -42,8 +42,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.searchConnectionButton);
-            this.groupBox1.Controls.Add(this.stationComboBox);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.stationSearch);
             this.groupBox1.Location = new System.Drawing.Point(41, 29);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1308, 221);
@@ -57,23 +57,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchConnectionButton.Location = new System.Drawing.Point(11, 150);
             this.searchConnectionButton.Name = "searchConnectionButton";
-            this.searchConnectionButton.Size = new System.Drawing.Size(356, 48);
-            this.searchConnectionButton.TabIndex = 10;
+            this.searchConnectionButton.Size = new System.Drawing.Size(360, 48);
+            this.searchConnectionButton.TabIndex = 2;
             this.searchConnectionButton.Text = "Search Connection";
             this.searchConnectionButton.UseVisualStyleBackColor = true;
             this.searchConnectionButton.Click += new System.EventHandler(this.searchConnectionButton_Click);
-            // 
-            // stationComboBox
-            // 
-            this.stationComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.stationComboBox.FormattingEnabled = true;
-            this.stationComboBox.Location = new System.Drawing.Point(11, 59);
-            this.stationComboBox.Name = "stationComboBox";
-            this.stationComboBox.Size = new System.Drawing.Size(356, 28);
-            this.stationComboBox.TabIndex = 3;
-            this.stationComboBox.TextChanged += new System.EventHandler(this.stationSearch_TextChanged);
             // 
             // label1
             // 
@@ -106,6 +94,14 @@
             this.timetableDataGridView.Size = new System.Drawing.Size(1308, 402);
             this.timetableDataGridView.TabIndex = 3;
             // 
+            // stationSearch
+            // 
+            this.stationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.stationSearch.Location = new System.Drawing.Point(11, 60);
+            this.stationSearch.Name = "stationSearch";
+            this.stationSearch.Size = new System.Drawing.Size(360, 203);
+            this.stationSearch.TabIndex = 3;
+            // 
             // StationTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -125,8 +121,8 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button searchConnectionButton;
-        private System.Windows.Forms.ComboBox stationComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView timetableDataGridView;
+        private StationSearch stationSearch;
     }
 }

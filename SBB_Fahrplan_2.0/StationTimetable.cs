@@ -17,7 +17,7 @@ namespace SBB_Fahrplan_2._0
         public StationTimetable()
         {
             InitializeComponent();
-            stationComboBox.Focus();
+            stationSearch.Focus();
         }
 
         private void stationSearch_TextChanged(object sender, EventArgs e)
@@ -27,16 +27,16 @@ namespace SBB_Fahrplan_2._0
 
         private void searchConnectionButton_Click(object sender, EventArgs e)
         {
-            if (!StationSearchHelper.stationExsits(stationComboBox.Text))
+            if (!stationSearch.isValidStation())
             {
-                MessageBox.Show("Station not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Station not found.", "Validationerror", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var stations = transport.GetStations(stationComboBox.Text);
+            var stations = transport.GetStations(stationSearch.getStation());
             foreach(Station station in stations.StationList)
             {
-                if(station.Name == stationComboBox.Text)
+                if(station.Name == stationSearch.getStation())
                 {
                     var stationsBoards = transport.GetStationBoard(station.Name, station.Id);
                     BindingList<StationBoardRow> stationBoardRows = new BindingList<StationBoardRow>();
