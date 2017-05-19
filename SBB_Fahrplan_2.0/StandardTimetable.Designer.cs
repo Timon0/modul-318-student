@@ -39,6 +39,7 @@
             this.fromStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.toStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.timetableDataGridView = new System.Windows.Forms.DataGridView();
+            this.sendResultsButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.sendResultsButton);
             this.groupBox1.Controls.Add(this.timePicker);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.searchConnectionButton);
@@ -184,6 +186,16 @@
             this.timetableDataGridView.Size = new System.Drawing.Size(1308, 341);
             this.timetableDataGridView.TabIndex = 5;
             // 
+            // sendResultsButton
+            // 
+            this.sendResultsButton.Location = new System.Drawing.Point(444, 215);
+            this.sendResultsButton.Name = "sendResultsButton";
+            this.sendResultsButton.Size = new System.Drawing.Size(360, 48);
+            this.sendResultsButton.TabIndex = 10;
+            this.sendResultsButton.Text = "Send Results";
+            this.sendResultsButton.UseVisualStyleBackColor = true;
+            this.sendResultsButton.Click += new System.EventHandler(this.sendResultsButton_Click);
+            // 
             // StandardTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -213,5 +225,6 @@
         private System.Windows.Forms.DateTimePicker timePicker;
         private StationSearch fromStationSearch;
         private StationSearch toStationSearch;
+        private System.Windows.Forms.Button sendResultsButton;
     }
 }

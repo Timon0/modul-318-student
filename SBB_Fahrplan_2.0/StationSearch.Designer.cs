@@ -44,6 +44,7 @@
             this.searchTextBox.TabIndex = 0;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
+            this.searchTextBox.Leave += new System.EventHandler(this.searchTextBox_Leave);
             // 
             // suggestionListBox
             // 

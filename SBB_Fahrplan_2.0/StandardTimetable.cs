@@ -68,5 +68,11 @@ namespace SBB_Fahrplan_2._0
 
             return true;
         }
+
+        private void sendResultsButton_Click(object sender, EventArgs e)
+        {
+            SendMailForm sendMailForm = new SendMailForm();
+            sendMailForm.Show();
+        }
     }
 }

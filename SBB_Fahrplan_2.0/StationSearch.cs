@@ -136,5 +136,11 @@ namespace SBB_Fahrplan_2._0
 
             System.Diagnostics.Process.Start(url);
         }
+
+        private void searchTextBox_Leave(object sender, EventArgs e)
+        {
+            suggestionListBox.Visible = false;
+            this.SendToBack();
+        }
     }
 }
