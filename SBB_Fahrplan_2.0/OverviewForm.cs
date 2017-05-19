@@ -23,7 +23,6 @@ namespace SBB_Fahrplan_2._0
             var standardTimetable = new StandardTimetable();
             standardTimetable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             userControlPanel.Controls.Add(standardTimetable);
-
         }
 
         private void stationTimetableButton_Click(object sender, EventArgs e)

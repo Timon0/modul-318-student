@@ -64,7 +64,7 @@
             this.userControlPanel.Location = new System.Drawing.Point(-8, 136);
             this.userControlPanel.Name = "userControlPanel";
             this.userControlPanel.Size = new System.Drawing.Size(1390, 700);
-            this.userControlPanel.TabIndex = 2;
+            this.userControlPanel.TabIndex = 4;
             // 
             // searchStationsButton
             // 
@@ -72,7 +72,7 @@
             this.searchStationsButton.Location = new System.Drawing.Point(804, 21);
             this.searchStationsButton.Name = "searchStationsButton";
             this.searchStationsButton.Size = new System.Drawing.Size(247, 88);
-            this.searchStationsButton.TabIndex = 3;
+            this.searchStationsButton.TabIndex = 2;
             this.searchStationsButton.Text = "Search stations nearby";
             this.searchStationsButton.UseVisualStyleBackColor = true;
             this.searchStationsButton.Click += new System.EventHandler(this.searchStationsButton_Click);

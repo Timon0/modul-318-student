@@ -23,6 +23,7 @@ namespace SBB_Fahrplan_2._0
         {
             if (!stationSearch.isValidStation())
             {
+                MessageBox.Show("Station not found!", "Validation error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Transport tranport = new Transport();
@@ -42,6 +43,5 @@ namespace SBB_Fahrplan_2._0
 
             stationsDataGridView.DataSource = stationsNearbyRows;
         }
-      
     }
 }

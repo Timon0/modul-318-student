@@ -56,6 +56,7 @@
             this.suggestionListBox.Name = "suggestionListBox";
             this.suggestionListBox.Size = new System.Drawing.Size(360, 164);
             this.suggestionListBox.TabIndex = 1;
+            this.suggestionListBox.TabStop = false;
             this.suggestionListBox.Visible = false;
             this.suggestionListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.suggestionListBox_KeyDown);
             this.suggestionListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.suggestionListBox_MouseDoubleClick);
@@ -68,6 +69,7 @@
             this.showStationButton.Name = "showStationButton";
             this.showStationButton.Size = new System.Drawing.Size(53, 51);
             this.showStationButton.TabIndex = 2;
+            this.showStationButton.TabStop = false;
             this.showStationButton.UseVisualStyleBackColor = true;
             this.showStationButton.Click += new System.EventHandler(this.showStationButton_Click);
             // 

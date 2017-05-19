@@ -36,9 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.fromStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.toStationSearch = new SBB_Fahrplan_2._0.StationSearch();
+            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             this.timePicker.Name = "timePicker";
             this.timePicker.ShowUpDown = true;
             this.timePicker.Size = new System.Drawing.Size(360, 26);
-            this.timePicker.TabIndex = 10;
+            this.timePicker.TabIndex = 3;
             // 
             // label3
             // 
@@ -110,7 +110,7 @@
             this.datePicker.Location = new System.Drawing.Point(13, 128);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(360, 26);
-            this.datePicker.TabIndex = 3;
+            this.datePicker.TabIndex = 2;
             // 
             // label4
             // 
@@ -148,6 +148,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "From";
             // 
+            // fromStationSearch
+            // 
+            this.fromStationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.fromStationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fromStationSearch.Location = new System.Drawing.Point(11, 60);
+            this.fromStationSearch.Name = "fromStationSearch";
+            this.fromStationSearch.Size = new System.Drawing.Size(423, 203);
+            this.fromStationSearch.TabIndex = 0;
+            // 
+            // toStationSearch
+            // 
+            this.toStationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.toStationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toStationSearch.Location = new System.Drawing.Point(444, 60);
+            this.toStationSearch.Name = "toStationSearch";
+            this.toStationSearch.Size = new System.Drawing.Size(423, 203);
+            this.toStationSearch.TabIndex = 1;
+            // 
             // timetableDataGridView
             // 
             this.timetableDataGridView.AllowUserToAddRows = false;
@@ -165,22 +183,6 @@
             this.timetableDataGridView.RowTemplate.Height = 28;
             this.timetableDataGridView.Size = new System.Drawing.Size(1308, 341);
             this.timetableDataGridView.TabIndex = 5;
-            // 
-            // fromStationSearch
-            // 
-            this.fromStationSearch.BackColor = System.Drawing.Color.Transparent;
-            this.fromStationSearch.Location = new System.Drawing.Point(11, 60);
-            this.fromStationSearch.Name = "fromStationSearch";
-            this.fromStationSearch.Size = new System.Drawing.Size(423, 203);
-            this.fromStationSearch.TabIndex = 11;
-            // 
-            // toStationSearch
-            // 
-            this.toStationSearch.BackColor = System.Drawing.Color.Transparent;
-            this.toStationSearch.Location = new System.Drawing.Point(444, 60);
-            this.toStationSearch.Name = "toStationSearch";
-            this.toStationSearch.Size = new System.Drawing.Size(423, 203);
-            this.toStationSearch.TabIndex = 12;
             // 
             // StandardTimetable
             // 

@@ -56,7 +56,7 @@ namespace SBB_Fahrplan_2._0
 
         public bool isValidStation()
         {
-            if (getStationName() == null)
+            if (getStation() == null)
             {
                 return false;
             }

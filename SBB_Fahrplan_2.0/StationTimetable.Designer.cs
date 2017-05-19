@@ -31,8 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchConnectionButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.stationSearch = new SBB_Fahrplan_2._0.StationSearch();
+            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.searchConnectionButton.Location = new System.Drawing.Point(11, 150);
             this.searchConnectionButton.Name = "searchConnectionButton";
             this.searchConnectionButton.Size = new System.Drawing.Size(360, 48);
-            this.searchConnectionButton.TabIndex = 2;
+            this.searchConnectionButton.TabIndex = 1;
             this.searchConnectionButton.Text = "Search Connection";
             this.searchConnectionButton.UseVisualStyleBackColor = true;
             this.searchConnectionButton.Click += new System.EventHandler(this.searchConnectionButton_Click);
@@ -74,6 +74,15 @@
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Station";
+            // 
+            // stationSearch
+            // 
+            this.stationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.stationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stationSearch.Location = new System.Drawing.Point(11, 60);
+            this.stationSearch.Name = "stationSearch";
+            this.stationSearch.Size = new System.Drawing.Size(423, 203);
+            this.stationSearch.TabIndex = 0;
             // 
             // timetableDataGridView
             // 
@@ -93,15 +102,6 @@
             this.timetableDataGridView.RowTemplate.Height = 28;
             this.timetableDataGridView.Size = new System.Drawing.Size(1308, 402);
             this.timetableDataGridView.TabIndex = 3;
-            // 
-            // stationSearch
-            // 
-            this.stationSearch.BackColor = System.Drawing.Color.Transparent;
-            this.stationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stationSearch.Location = new System.Drawing.Point(11, 60);
-            this.stationSearch.Name = "stationSearch";
-            this.stationSearch.Size = new System.Drawing.Size(423, 203);
-            this.stationSearch.TabIndex = 3;
             // 
             // StationTimetable
             // 

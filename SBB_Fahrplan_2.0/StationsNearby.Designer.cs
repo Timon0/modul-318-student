@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.searchStationsButton = new System.Windows.Forms.Button();
-            this.stationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.stationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.label1 = new System.Windows.Forms.Label();
+            this.searchStationsButton = new System.Windows.Forms.Button();
+            this.stationSearch = new SBB_Fahrplan_2._0.StationSearch();
+            this.stationsDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stationsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Query";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Place";
+            // 
             // searchStationsButton
             // 
             this.searchStationsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -58,10 +67,19 @@
             this.searchStationsButton.Location = new System.Drawing.Point(11, 150);
             this.searchStationsButton.Name = "searchStationsButton";
             this.searchStationsButton.Size = new System.Drawing.Size(360, 48);
-            this.searchStationsButton.TabIndex = 2;
+            this.searchStationsButton.TabIndex = 1;
             this.searchStationsButton.Text = "Search Stations";
             this.searchStationsButton.UseVisualStyleBackColor = true;
             this.searchStationsButton.Click += new System.EventHandler(this.searchStationsButton_Click);
+            // 
+            // stationSearch
+            // 
+            this.stationSearch.BackColor = System.Drawing.Color.Transparent;
+            this.stationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stationSearch.Location = new System.Drawing.Point(11, 69);
+            this.stationSearch.Name = "stationSearch";
+            this.stationSearch.Size = new System.Drawing.Size(423, 203);
+            this.stationSearch.TabIndex = 0;
             // 
             // stationsDataGridView
             // 
@@ -81,24 +99,6 @@
             this.stationsDataGridView.RowTemplate.Height = 28;
             this.stationsDataGridView.Size = new System.Drawing.Size(1308, 402);
             this.stationsDataGridView.TabIndex = 5;
-            // 
-            // stationSearch
-            // 
-            this.stationSearch.BackColor = System.Drawing.Color.Transparent;
-            this.stationSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stationSearch.Location = new System.Drawing.Point(11, 69);
-            this.stationSearch.Name = "stationSearch";
-            this.stationSearch.Size = new System.Drawing.Size(423, 203);
-            this.stationSearch.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Place";
             // 
             // StationsNearby
             // 
