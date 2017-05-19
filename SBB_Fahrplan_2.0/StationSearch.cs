@@ -56,23 +56,24 @@ namespace SBB_Fahrplan_2._0
 
         public bool isValidStation()
         {
-            if (getStation() == null)
+            if (getStationName() == null)
             {
                 return false;
             }
             return true;
         }
 
+        public String getStationName()
+        {
+            return searchTextBox.Text;
+        }
+
         public Station getStation()
         {
-            var stations = transport.GetStations(searchTextBox.Text);
-            if (stations == null)
+            var stations = transport.GetStations(getStationName());
+            foreach(var station in stations.StationList)
             {
-                return null;
-            }
-            foreach (var station in stations.StationList)
-            {
-                if (station.Name == searchTextBox.Text)
+                if(station.Name == getStationName())
                 {
                     return station;
                 }
@@ -128,7 +129,9 @@ namespace SBB_Fahrplan_2._0
             NumberFormatInfo numberFormatInfo = new NumberFormatInfo();
             numberFormatInfo.NumberDecimalSeparator = ".";
 
-            string coordinates = getStation().Coordinate.XCoordinate.ToString(numberFormatInfo) + "," + getStation().Coordinate.YCoordinate.ToString(numberFormatInfo);
+            Station station = getStation();
+
+            string coordinates = station.Coordinate.XCoordinate.ToString(numberFormatInfo) + "," + station.Coordinate.YCoordinate.ToString(numberFormatInfo);
             string url = "http://www.google.com/maps?q=" + coordinates;
 
             System.Diagnostics.Process.Start(url);

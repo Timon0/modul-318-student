@@ -13,10 +13,7 @@ using System.Globalization;
 namespace SBB_Fahrplan_2._0
 {
     public partial class StationsNearby : UserControl
-    {
-        private double longtitude;
-        private double latitude;
-       
+    {       
         public StationsNearby()
         {
             InitializeComponent();
@@ -32,13 +29,15 @@ namespace SBB_Fahrplan_2._0
             NumberFormatInfo numberFormatInfo = new NumberFormatInfo();
             numberFormatInfo.NumberDecimalSeparator = ".";
 
-            var stations = tranport.GetStationsNearby(stationSearch.getStation().Coordinate.XCoordinate.ToString(numberFormatInfo), stationSearch.getStation().Coordinate.YCoordinate.ToString(numberFormatInfo));
+            Station station = stationSearch.getStation();
+
+            var stations = tranport.GetStationsNearby(station.Coordinate.XCoordinate.ToString(numberFormatInfo), station.Coordinate.YCoordinate.ToString(numberFormatInfo));
             BindingList<StationsNearbyRow> stationsNearbyRows = new BindingList<StationsNearbyRow>();
             StationsNearbyConverter converter = new StationsNearbyConverter();
 
-            foreach (Station station in stations.StationList)
+            foreach (Station stationNearby in stations.StationList)
             {
-                stationsNearbyRows.Add(converter.toStationsNearbyRow(station));
+                stationsNearbyRows.Add(converter.toStationsNearbyRow(stationNearby));
             }
 
             stationsDataGridView.DataSource = stationsNearbyRows;

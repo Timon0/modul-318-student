@@ -27,23 +27,17 @@ namespace SBB_Fahrplan_2._0
                 MessageBox.Show("Station not found.", "Validationerror", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            var stations = transport.GetStations(stationSearch.getStation().Name);
-            foreach(Station station in stations.StationList)
+            var station = stationSearch.getStation();
+            var stationsBoards = transport.GetStationBoard(station.Name, station.Id);
+            BindingList<StationBoardRow> stationBoardRows = new BindingList<StationBoardRow>();
+            StationBoardConverter stationBoardConverter = new StationBoardConverter();
+            foreach(StationBoard stationBoard in stationsBoards.Entries)
             {
-                if(station.Name == stationSearch.getStation().Name)
-                {
-                    var stationsBoards = transport.GetStationBoard(station.Name, station.Id);
-                    BindingList<StationBoardRow> stationBoardRows = new BindingList<StationBoardRow>();
-                    StationBoardConverter stationBoardConverter = new StationBoardConverter();
-                    foreach(StationBoard stationBoard in stationsBoards.Entries)
-                    {
-                        stationBoardRows.Add(stationBoardConverter.toStationBoardRow(stationBoard));
-                    }
-                    timetableDataGridView.DataSource = stationBoardRows;
-                    timetableDataGridView.Columns["Departure"].DefaultCellStyle.Format = "HH:mm";
-                }
+                stationBoardRows.Add(stationBoardConverter.toStationBoardRow(stationBoard));
             }
+            timetableDataGridView.DataSource = stationBoardRows;
+            timetableDataGridView.Columns["Departure"].DefaultCellStyle.Format = "HH:mm";
         }
     }
 }
+

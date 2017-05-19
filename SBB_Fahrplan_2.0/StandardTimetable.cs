@@ -30,7 +30,7 @@ namespace SBB_Fahrplan_2._0
             }
 
             ConnectionConverter connectionKonverter = new ConnectionConverter();
-            var connections = transport.GetConnections(fromStationSearch.getStation().Name, toStationSearch.getStation().Name, datePicker.Value, timePicker.Value);
+            var connections = transport.GetConnections(fromStationSearch.getStationName(), toStationSearch.getStationName(), datePicker.Value, timePicker.Value);
             BindingList<ConnectionRow> connectionRows = new BindingList<ConnectionRow>();
             foreach (Connection connection in connections.ConnectionList)
             {
