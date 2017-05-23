@@ -30,7 +30,7 @@ namespace SwissTransport
         public void Connections()
         {
             testee = new Transport();
-            var connections = testee.GetConnections("Sursee", "Luzern", DateTime.Now, DateTime.Now);
+            var connections = testee.GetConnections("Sursee", "Luzern", DateTime.Now, DateTime.Now, 1);
 
             Assert.IsNotNull(connections);
         }

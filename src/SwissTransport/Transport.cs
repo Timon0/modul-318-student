@@ -47,9 +47,9 @@ namespace SwissTransport
             return null;
         }
 
-        public Connections GetConnections(string fromStation, string toStattion, DateTime date, DateTime time)
+        public Connections GetConnections(string fromStation, string toStattion, DateTime date, DateTime time, int isArrivalTime)
         {
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStattion + "&date=" + date.ToString("yyyy-MM-dd") + "&time=" + time.ToString("HH:mm"));
+            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStattion + "&date=" + date.ToString("yyyy-MM-dd") + "&time=" + time.ToString("HH:mm") + "&isArrivalTime=" + isArrivalTime);
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 

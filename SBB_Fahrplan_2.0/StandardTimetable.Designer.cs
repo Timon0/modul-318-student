@@ -40,6 +40,8 @@
             this.fromStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.toStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.timetableDataGridView = new System.Windows.Forms.DataGridView();
+            this.arrivalRadioButton = new System.Windows.Forms.RadioButton();
+            this.departureRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +51,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.departureRadioButton);
+            this.groupBox1.Controls.Add(this.arrivalRadioButton);
             this.groupBox1.Controls.Add(this.sendResultsButton);
             this.groupBox1.Controls.Add(this.timePicker);
             this.groupBox1.Controls.Add(this.label3);
@@ -207,6 +211,28 @@
             this.timetableDataGridView.Size = new System.Drawing.Size(872, 222);
             this.timetableDataGridView.TabIndex = 6;
             // 
+            // arrivalRadioButton
+            // 
+            this.arrivalRadioButton.AutoSize = true;
+            this.arrivalRadioButton.Location = new System.Drawing.Point(296, 108);
+            this.arrivalRadioButton.Name = "arrivalRadioButton";
+            this.arrivalRadioButton.Size = new System.Drawing.Size(54, 17);
+            this.arrivalRadioButton.TabIndex = 10;
+            this.arrivalRadioButton.Text = "Arrival";
+            this.arrivalRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // departureRadioButton
+            // 
+            this.departureRadioButton.AutoSize = true;
+            this.departureRadioButton.Checked = true;
+            this.departureRadioButton.Location = new System.Drawing.Point(9, 108);
+            this.departureRadioButton.Name = "departureRadioButton";
+            this.departureRadioButton.Size = new System.Drawing.Size(72, 17);
+            this.departureRadioButton.TabIndex = 11;
+            this.departureRadioButton.TabStop = true;
+            this.departureRadioButton.Text = "Departure";
+            this.departureRadioButton.UseVisualStyleBackColor = true;
+            // 
             // StandardTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,5 +265,7 @@
         private System.Windows.Forms.Button sendResultsButton;
         private StationSearch fromStationSearch;
         private StationSearch toStationSearch;
+        private System.Windows.Forms.RadioButton departureRadioButton;
+        private System.Windows.Forms.RadioButton arrivalRadioButton;
     }
 }
