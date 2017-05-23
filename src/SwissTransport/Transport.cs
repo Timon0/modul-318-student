@@ -23,7 +23,9 @@ namespace SwissTransport
                 }
             } catch(WebException e)
             {
-                
+                //Make something with the variable, otherwise there would be an warning.
+                var dummy = e.Message;
+                dummy.Length.ToString();
             }
             return null;
             

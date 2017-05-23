@@ -21,7 +21,7 @@ namespace SBB_Fahrplan_2._0
             {
                 return null;
             }
-            ConnectionRow connectionRow = new ConnectionRow();
+            var connectionRow = new ConnectionRow();
 
             connectionRow.From = connection.From.Station.Name;
             connectionRow.To = connection.To.Station.Name;

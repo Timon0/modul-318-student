@@ -40,13 +40,13 @@ namespace SBB_Fahrplan_2._0
             {
                 isArrivalTime = 1;
             }
-
-            ConnectionConverter connectionKonverter = new ConnectionConverter();
+            
+            var connectionKonverter = new ConnectionConverter();
             var connections = transport.GetConnections(fromStationSearch.getStationName(), toStationSearch.getStationName(), datePicker.Value, timePicker.Value, isArrivalTime);
-            BindingList<ConnectionRow> connectionRows = new BindingList<ConnectionRow>();
+            var connectionRows = new BindingList<ConnectionRow>();
             foreach (Connection connection in connections.ConnectionList)
             {
-                ConnectionRow connectionRow = new ConnectionRow();
+                var connectionRow = new ConnectionRow();
                 connectionRow = connectionKonverter.toConnectionRow(connection);
                 connectionRows.Add(connectionRow);
             }
@@ -62,7 +62,7 @@ namespace SBB_Fahrplan_2._0
 
         private bool validateInput()
         {
-            string errors = "";
+            var errors = "";
             if (!fromStationSearch.isValidStation())
             {
                 errors += "Departurestation not found!\n";
@@ -83,7 +83,7 @@ namespace SBB_Fahrplan_2._0
 
         private void sendResultsButton_Click(object sender, EventArgs e)
         {
-            SendMailForm sendMailForm = new SendMailForm(timetableDataGridView);
+            var sendMailForm = new SendMailForm(timetableDataGridView);
         }
         private void StandardTimetable_KeyDown(object sender, KeyEventArgs e)
         {

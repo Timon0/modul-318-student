@@ -142,13 +142,13 @@ namespace SBB_Fahrplan_2._0
                 MessageBox.Show("Station not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            NumberFormatInfo numberFormatInfo = new NumberFormatInfo();
+            var numberFormatInfo = new NumberFormatInfo();
             numberFormatInfo.NumberDecimalSeparator = ".";
 
-            Station station = getStation();
+            var station = getStation();
 
-            string coordinates = station.Coordinate.XCoordinate.ToString(numberFormatInfo) + "," + station.Coordinate.YCoordinate.ToString(numberFormatInfo);
-            string url = "http://www.google.com/maps?q=" + coordinates;
+            var coordinates = station.Coordinate.XCoordinate.ToString(numberFormatInfo) + "," + station.Coordinate.YCoordinate.ToString(numberFormatInfo);
+            var url = "http://www.google.com/maps?q=" + coordinates;
 
             System.Diagnostics.Process.Start(url);
         }

@@ -31,15 +31,15 @@ namespace SBB_Fahrplan_2._0
                 MessageBox.Show("Station not found!", "Validation error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Transport tranport = new Transport();
-            NumberFormatInfo numberFormatInfo = new NumberFormatInfo();
+            var tranport = new Transport();
+            var numberFormatInfo = new NumberFormatInfo();
             numberFormatInfo.NumberDecimalSeparator = ".";
 
-            Station station = stationSearch.getStation();
+            var station = stationSearch.getStation();
 
             var stations = tranport.GetStationsNearby(station.Coordinate.XCoordinate.ToString(numberFormatInfo), station.Coordinate.YCoordinate.ToString(numberFormatInfo));
-            BindingList<StationsNearbyRow> stationsNearbyRows = new BindingList<StationsNearbyRow>();
-            StationsNearbyConverter converter = new StationsNearbyConverter();
+            var stationsNearbyRows = new BindingList<StationsNearbyRow>();
+            var converter = new StationsNearbyConverter();
 
             foreach (Station stationNearby in stations.StationList)
             {
@@ -51,7 +51,7 @@ namespace SBB_Fahrplan_2._0
 
         private void sendResultsButton_Click(object sender, EventArgs e)
         {
-            SendMailForm sendMailForm = new SendMailForm(stationsDataGridView);
+            var sendMailForm = new SendMailForm(stationsDataGridView);
         }
     }
 }

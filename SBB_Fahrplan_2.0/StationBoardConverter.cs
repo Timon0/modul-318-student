@@ -21,7 +21,7 @@ namespace SBB_Fahrplan_2._0
                 return null;
             }
 
-            StationBoardRow stationBoardRow = new StationBoardRow();
+            var stationBoardRow = new StationBoardRow();
 
             stationBoardRow.From = stationBoard.Stop.Station.Name;
             stationBoardRow.To = stationBoard.To;

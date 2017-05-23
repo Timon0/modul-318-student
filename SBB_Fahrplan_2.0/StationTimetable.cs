@@ -34,8 +34,8 @@ namespace SBB_Fahrplan_2._0
             }
             var station = stationSearch.getStation();
             var stationsBoards = transport.GetStationBoard(station.Name, station.Id);
-            BindingList<StationBoardRow> stationBoardRows = new BindingList<StationBoardRow>();
-            StationBoardConverter stationBoardConverter = new StationBoardConverter();
+            var stationBoardRows = new BindingList<StationBoardRow>();
+            var stationBoardConverter = new StationBoardConverter();
             foreach(StationBoard stationBoard in stationsBoards.Entries)
             {
                 stationBoardRows.Add(stationBoardConverter.toStationBoardRow(stationBoard));
@@ -46,7 +46,7 @@ namespace SBB_Fahrplan_2._0
 
         private void sendResultsButton_Click(object sender, EventArgs e)
         {
-            SendMailForm sendMailForm = new SendMailForm(timetableDataGridView);
+            var sendMailForm = new SendMailForm(timetableDataGridView);
         }
     }
 }

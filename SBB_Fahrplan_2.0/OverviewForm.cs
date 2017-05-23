@@ -32,7 +32,7 @@ namespace SBB_Fahrplan_2._0
             userControlPanel.Controls.Clear();
             var stationTimetable = new StationTimetable();
             stationTimetable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-           this.AcceptButton = stationTimetable.AcceptButton;
+            this.AcceptButton = stationTimetable.AcceptButton;
             userControlPanel.Controls.Add(stationTimetable);
         }
 

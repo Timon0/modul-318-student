@@ -21,7 +21,7 @@ namespace SBB_Fahrplan_2._0
                 return null;
             }
 
-            StationsNearbyRow stationNearbyRow = new StationsNearbyRow();
+            var stationNearbyRow = new StationsNearbyRow();
 
             stationNearbyRow.Station = station.Name;
             stationNearbyRow.Distance = station.Distance;

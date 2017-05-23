@@ -46,11 +46,11 @@ namespace SBB_Fahrplan_2._0
                 return;
             }
 
-            SmtpClient mailClient = new SmtpClient("smtp.gmail.com");
+            var mailClient = new SmtpClient("smtp.gmail.com");
             mailClient.Port = 25;
             mailClient.EnableSsl = true;
             mailClient.UseDefaultCredentials = false;
-            MailMessage msgMail = new MailMessage();
+            var msgMail = new MailMessage();
             msgMail.From = new MailAddress(email);
             msgMail.To.Add(new MailAddress(toTextBox.Text));
             msgMail.Subject = "SBB Fahrplan 2.0";
@@ -73,8 +73,8 @@ namespace SBB_Fahrplan_2._0
 
         private bool validateInput()
         {
-            string errors = "";
-
+            var errors = "";
+       
             if (!(toTextBox.Text.Contains('@') && toTextBox.Text.Contains('.')))
             {
                 errors += "Not valid recipient!";
@@ -91,7 +91,7 @@ namespace SBB_Fahrplan_2._0
 
         private String getTextFromDataGridView(DataGridView dataGridView)
         {
-            String text = "";
+            var text = "";
             for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
                 DataGridViewRow row = dataGridView.Rows[i];
