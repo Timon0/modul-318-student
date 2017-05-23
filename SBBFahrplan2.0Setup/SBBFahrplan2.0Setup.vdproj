@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:SBBFahrplan2.0Setup"
+"ProjectName" = "8:Setup"
 "LanguageId" = "3:1031"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1031"
@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6AA5F3689C5FD845EE8CCA83A41CE906"
+        "MsmKey" = "8:_4AB9302917C1B2C883284BB1F5D294E3"
         "OwnerKey" = "8:_C03029B9093E4CC9A7149F27F6CEF8C9"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,13 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_EF1EF58B2EA0B97E29A677FCC503496A"
-        "OwnerKey" = "8:_6AA5F3689C5FD845EE8CCA83A41CE906"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EF1EF58B2EA0B97E29A677FCC503496A"
+        "OwnerKey" = "8:_4AB9302917C1B2C883284BB1F5D294E3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,13 +52,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4AB9302917C1B2C883284BB1F5D294E3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_160EC314D043352D2E736BC074613040"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6AA5F3689C5FD845EE8CCA83A41CE906"
+        "OwnerKey" = "8:_EF1EF58B2EA0B97E29A677FCC503496A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -85,6 +85,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -101,6 +117,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -161,14 +193,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6AA5F3689C5FD845EE8CCA83A41CE906"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4AB9302917C1B2C883284BB1F5D294E3"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:SwissTransport, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6AA5F3689C5FD845EE8CCA83A41CE906"
+                    "_4AB9302917C1B2C883284BB1F5D294E3"
                     {
                     "Name" = "8:SwissTransport.dll"
                     "Attributes" = "3:512"
@@ -250,17 +282,6 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_2BFA45FE9F6C4DC685852A85686D8A1E"
-                    {
-                    "Name" = "8:SBB Fahrplan 2.0"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_68DB9220C1C547618AF0770B55D919E7"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_C038ADA0CA8D41808D89204A6ADDDE2D"
@@ -291,7 +312,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SBBFahrplan2.0Setup"
         "ProductCode" = "8:{DD3440E2-3F74-4007-84D3-CFCF2D79A416}"
-        "PackageCode" = "8:{2AA0521F-58E8-430C-8548-AB524FD15A47}"
+        "PackageCode" = "8:{D323FE82-F248-41AD-9388-AADBA06DD427}"
         "UpgradeCode" = "8:{B499AC2E-0421-40E7-ABD8-0A777ADAAFD2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -302,7 +323,7 @@
         "Manufacturer" = "8:SBB Fahrplan 2.0"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:SBBFahrplan2.0Setup"
+        "Title" = "8:Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Timon Kurmann"
         "Keywords" = "8:"
@@ -826,7 +847,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C03029B9093E4CC9A7149F27F6CEF8C9"
             {
-            "SourcePath" = "8:..\\SBB_Fahrplan_2.0\\obj\\Debug\\SBB_Fahrplan_2.0_UI.exe"
+            "SourcePath" = "8:..\\SBB_Fahrplan_2.0\\obj\\Release\\SBB_Fahrplan_2.0_UI.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5BD7DAE7F86740F888CE04BE8915778C"
