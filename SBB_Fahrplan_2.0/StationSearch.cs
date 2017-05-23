@@ -53,7 +53,10 @@ namespace SBB_Fahrplan_2._0
                 suggestionListBox.Height = suggestionListBox.Items.Count * 5;
             }
         }
-
+        /// <summary>
+        /// Checks if the text in the textfield is a valid station.
+        /// </summary>
+        /// <returns>If it is valid</returns>
         public bool isValidStation()
         {
             if (getStation() == null)
@@ -63,11 +66,19 @@ namespace SBB_Fahrplan_2._0
             return true;
         }
 
+        /// <summary>
+        /// The text in the textfield.
+        /// </summary>
+        /// <returns></returns>
         public String getStationName()
         {
             return searchTextBox.Text;
         }
 
+        /// <summary>
+        /// Gets the station object
+        /// </summary>
+        /// <returns>Station</returns>
         public Station getStation()
         {
             var stations = transport.GetStations(getStationName());

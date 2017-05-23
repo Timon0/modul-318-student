@@ -10,6 +10,11 @@ namespace SBB_Fahrplan_2._0
 {
     class ConnectionConverter
     {
+        /// <summary>
+        /// Converts the Connection object into a ConnectionRow object.
+        /// </summary>
+        /// <param name="connection">The Connection object which needs to be converted.</param>
+        /// <returns>The ConnectionRow object</returns>
         public ConnectionRow toConnectionRow(Connection connection)
         {
             if(connection == null)

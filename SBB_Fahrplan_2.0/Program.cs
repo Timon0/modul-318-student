@@ -9,7 +9,7 @@ namespace SBB_Fahrplan_2._0
     static class Program
     {
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// Start of the Application
         /// </summary>
         [STAThread]
         static void Main()

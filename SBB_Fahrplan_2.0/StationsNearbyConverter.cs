@@ -9,6 +9,11 @@ namespace SBB_Fahrplan_2._0
 {
     class StationsNearbyConverter
     {
+        /// <summary>
+        /// Converts the Station object into a StationsNearbsRow object.
+        /// </summary>
+        /// <param name="station">The Station witch needs to be converted.</param>
+        /// <returns>The new StationsNearbyRow</returns>
         public StationsNearbyRow toStationsNearbyRow(Station station)
         {
             if(station == null)

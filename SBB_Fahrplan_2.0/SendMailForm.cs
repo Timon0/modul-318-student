@@ -16,6 +16,7 @@ namespace SBB_Fahrplan_2._0
         private string email = "sbbfahrplan2.0@gmail.com";
         private string mailPassword = "fahrplansbb";
         private string text = "";
+
         public SendMailForm(DataGridView dataGridView)
         {
             InitializeComponent();
