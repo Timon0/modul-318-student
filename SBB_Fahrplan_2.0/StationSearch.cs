@@ -71,6 +71,10 @@ namespace SBB_Fahrplan_2._0
         public Station getStation()
         {
             var stations = transport.GetStations(getStationName());
+            if(stations == null)
+            {
+                return null;
+            }
             foreach(var station in stations.StationList)
             {
                 if(station.Name == getStationName())
@@ -137,7 +141,7 @@ namespace SBB_Fahrplan_2._0
             System.Diagnostics.Process.Start(url);
         }
 
-        private void searchTextBox_Leave(object sender, EventArgs e)
+        private void StationSearch_Leave(object sender, EventArgs e)
         {
             suggestionListBox.Visible = false;
             this.SendToBack();

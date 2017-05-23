@@ -36,15 +36,15 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchTextBox.Location = new System.Drawing.Point(0, 0);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(360, 26);
+            this.searchTextBox.Size = new System.Drawing.Size(240, 20);
             this.searchTextBox.TabIndex = 0;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
-            this.searchTextBox.Leave += new System.EventHandler(this.searchTextBox_Leave);
             // 
             // suggestionListBox
             // 
@@ -52,10 +52,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.suggestionListBox.FormattingEnabled = true;
-            this.suggestionListBox.ItemHeight = 20;
-            this.suggestionListBox.Location = new System.Drawing.Point(0, 26);
+            this.suggestionListBox.Location = new System.Drawing.Point(0, 20);
             this.suggestionListBox.Name = "suggestionListBox";
-            this.suggestionListBox.Size = new System.Drawing.Size(360, 164);
+            this.suggestionListBox.Size = new System.Drawing.Size(240, 108);
             this.suggestionListBox.TabIndex = 1;
             this.suggestionListBox.TabStop = false;
             this.suggestionListBox.Visible = false;
@@ -64,11 +63,14 @@
             // 
             // showStationButton
             // 
+            this.showStationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.showStationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.showStationButton.Image = ((System.Drawing.Image)(resources.GetObject("showStationButton.Image")));
-            this.showStationButton.Location = new System.Drawing.Point(370, 0);
+            this.showStationButton.Location = new System.Drawing.Point(246, 0);
             this.showStationButton.Name = "showStationButton";
-            this.showStationButton.Size = new System.Drawing.Size(53, 51);
+            this.showStationButton.Size = new System.Drawing.Size(37, 44);
             this.showStationButton.TabIndex = 2;
             this.showStationButton.TabStop = false;
             this.showStationButton.UseVisualStyleBackColor = true;
@@ -83,7 +85,8 @@
             this.Controls.Add(this.suggestionListBox);
             this.Controls.Add(this.searchTextBox);
             this.Name = "StationSearch";
-            this.Size = new System.Drawing.Size(423, 203);
+            this.Size = new System.Drawing.Size(283, 132);
+            this.Leave += new System.EventHandler(this.StationSearch_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

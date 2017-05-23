@@ -43,5 +43,10 @@ namespace SBB_Fahrplan_2._0
 
             stationsDataGridView.DataSource = stationsNearbyRows;
         }
+
+        private void sendResultsButton_Click(object sender, EventArgs e)
+        {
+            SendMailForm sendMailForm = new SendMailForm(stationsDataGridView);
+        }
     }
 }

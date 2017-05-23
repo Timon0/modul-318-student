@@ -71,8 +71,7 @@ namespace SBB_Fahrplan_2._0
 
         private void sendResultsButton_Click(object sender, EventArgs e)
         {
-            SendMailForm sendMailForm = new SendMailForm();
-            sendMailForm.Show();
+            SendMailForm sendMailForm = new SendMailForm(timetableDataGridView);
         }
     }
 }

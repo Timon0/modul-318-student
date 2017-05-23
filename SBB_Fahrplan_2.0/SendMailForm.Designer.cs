@@ -28,50 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fromTextBox = new System.Windows.Forms.TextBox();
             this.toTextBox = new System.Windows.Forms.TextBox();
             this.sendMailButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "From";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 105);
+            this.label2.Location = new System.Drawing.Point(16, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 20);
+            this.label2.Size = new System.Drawing.Size(20, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "To";
             // 
-            // fromTextBox
-            // 
-            this.fromTextBox.Location = new System.Drawing.Point(28, 65);
-            this.fromTextBox.Name = "fromTextBox";
-            this.fromTextBox.Size = new System.Drawing.Size(280, 26);
-            this.fromTextBox.TabIndex = 0;
-            // 
             // toTextBox
             // 
-            this.toTextBox.Location = new System.Drawing.Point(28, 128);
+            this.toTextBox.Location = new System.Drawing.Point(19, 44);
+            this.toTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.toTextBox.Name = "toTextBox";
-            this.toTextBox.Size = new System.Drawing.Size(280, 26);
+            this.toTextBox.Size = new System.Drawing.Size(188, 20);
             this.toTextBox.TabIndex = 1;
             // 
             // sendMailButton
             // 
-            this.sendMailButton.Location = new System.Drawing.Point(28, 193);
+            this.sendMailButton.Location = new System.Drawing.Point(19, 100);
+            this.sendMailButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sendMailButton.Name = "sendMailButton";
-            this.sendMailButton.Size = new System.Drawing.Size(280, 63);
+            this.sendMailButton.Size = new System.Drawing.Size(187, 41);
             this.sendMailButton.TabIndex = 2;
             this.sendMailButton.Text = "Send Mail";
             this.sendMailButton.UseVisualStyleBackColor = true;
@@ -80,14 +65,13 @@
             // SendMailForm
             // 
             this.AcceptButton = this.sendMailButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 278);
+            this.ClientSize = new System.Drawing.Size(229, 167);
             this.Controls.Add(this.sendMailButton);
             this.Controls.Add(this.toTextBox);
-            this.Controls.Add(this.fromTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SendMailForm";
             this.Text = "Mail";
             this.ResumeLayout(false);
@@ -96,10 +80,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox fromTextBox;
         private System.Windows.Forms.TextBox toTextBox;
         private System.Windows.Forms.Button sendMailButton;
     }

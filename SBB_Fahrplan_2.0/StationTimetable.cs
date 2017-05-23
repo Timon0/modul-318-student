@@ -38,6 +38,11 @@ namespace SBB_Fahrplan_2._0
             timetableDataGridView.DataSource = stationBoardRows;
             timetableDataGridView.Columns["Departure"].DefaultCellStyle.Format = "HH:mm";
         }
+
+        private void sendResultsButton_Click(object sender, EventArgs e)
+        {
+            SendMailForm sendMailForm = new SendMailForm(timetableDataGridView);
+        }
     }
 }
 
