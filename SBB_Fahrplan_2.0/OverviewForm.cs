@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace SBB_Fahrplan_2._0
 {
     public partial class OverviewForm : Form
-    {
+    { 
+
         public OverviewForm()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace SBB_Fahrplan_2._0
             userControlPanel.Controls.Clear();
             var standardTimetable = new StandardTimetable();
             standardTimetable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this.AcceptButton = standardTimetable.AcceptButton;
             userControlPanel.Controls.Add(standardTimetable);
         }
 
@@ -30,6 +32,7 @@ namespace SBB_Fahrplan_2._0
             userControlPanel.Controls.Clear();
             var stationTimetable = new StationTimetable();
             stationTimetable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+           this.AcceptButton = stationTimetable.AcceptButton;
             userControlPanel.Controls.Add(stationTimetable);
         }
 
@@ -38,7 +41,13 @@ namespace SBB_Fahrplan_2._0
             userControlPanel.Controls.Clear();
             var stationsNearby = new StationsNearby();
             stationsNearby.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this.AcceptButton = stationsNearby.AcceptButton;
             userControlPanel.Controls.Add(stationsNearby);
+        }
+
+        private void OverviewForm_Load(object sender, EventArgs e)
+        {
+            standardTimetableButton.PerformClick();
         }
     }
 }

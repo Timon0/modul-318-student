@@ -13,7 +13,12 @@ using System.Globalization;
 namespace SBB_Fahrplan_2._0
 {
     public partial class StationsNearby : UserControl
-    {       
+    {
+        public Button AcceptButton
+        {
+            get { return searchStationsButton; }
+        }
+
         public StationsNearby()
         {
             InitializeComponent();

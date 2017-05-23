@@ -15,6 +15,7 @@ namespace SBB_Fahrplan_2._0
     public partial class StationSearch : UserControl
     {
         private Transport transport = new Transport();
+        private IButtonControl tempAcceptButton = new Button();
         public StationSearch()
         {
             InitializeComponent();
@@ -156,6 +157,19 @@ namespace SBB_Fahrplan_2._0
         {
             suggestionListBox.Visible = false;
             this.SendToBack();
+        }
+
+        private void suggestionListBox_VisibleChanged(object sender, EventArgs e)
+        {
+            if(suggestionListBox.Visible == true)
+            {
+                this.tempAcceptButton = this.ParentForm.AcceptButton;
+                this.ParentForm.AcceptButton = null;
+            }
+            else
+            {
+                this.ParentForm.AcceptButton = this.tempAcceptButton;
+            }
         }
     }
 }

@@ -13,6 +13,12 @@ namespace SBB_Fahrplan_2._0
 {
     public partial class StandardTimetable : UserControl
     {
+
+        public Button AcceptButton
+        {
+            get { return this.searchConnectionButton; }
+        }
+
         private Transport transport = new Transport();
 
         public StandardTimetable()
@@ -72,6 +78,13 @@ namespace SBB_Fahrplan_2._0
         private void sendResultsButton_Click(object sender, EventArgs e)
         {
             SendMailForm sendMailForm = new SendMailForm(timetableDataGridView);
+        }
+        private void StandardTimetable_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                searchConnectionButton.PerformClick();
+            }
         }
     }
 }

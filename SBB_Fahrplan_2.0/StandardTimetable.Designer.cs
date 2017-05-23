@@ -37,9 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.fromStationSearch = new SBB_Fahrplan_2._0.StationSearch();
             this.toStationSearch = new SBB_Fahrplan_2._0.StationSearch();
+            this.timetableDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -60,9 +60,9 @@
             this.groupBox1.Controls.Add(this.fromStationSearch);
             this.groupBox1.Controls.Add(this.toStationSearch);
             this.groupBox1.Location = new System.Drawing.Point(27, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(872, 181);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -71,7 +71,7 @@
             // sendResultsButton
             // 
             this.sendResultsButton.Location = new System.Drawing.Point(296, 140);
-            this.sendResultsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendResultsButton.Margin = new System.Windows.Forms.Padding(2);
             this.sendResultsButton.Name = "sendResultsButton";
             this.sendResultsButton.Size = new System.Drawing.Size(240, 31);
             this.sendResultsButton.TabIndex = 5;
@@ -87,7 +87,7 @@
             this.timePicker.CustomFormat = "HH:mm";
             this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timePicker.Location = new System.Drawing.Point(296, 83);
-            this.timePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timePicker.Margin = new System.Windows.Forms.Padding(2);
             this.timePicker.Name = "timePicker";
             this.timePicker.ShowUpDown = true;
             this.timePicker.Size = new System.Drawing.Size(241, 20);
@@ -111,7 +111,7 @@
             this.searchConnectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchConnectionButton.Location = new System.Drawing.Point(9, 140);
-            this.searchConnectionButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchConnectionButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchConnectionButton.Name = "searchConnectionButton";
             this.searchConnectionButton.Size = new System.Drawing.Size(240, 31);
             this.searchConnectionButton.TabIndex = 4;
@@ -126,7 +126,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datePicker.Location = new System.Drawing.Point(9, 83);
-            this.datePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePicker.Margin = new System.Windows.Forms.Padding(2);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(241, 20);
             this.datePicker.TabIndex = 2;
@@ -170,25 +170,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "From";
             // 
-            // timetableDataGridView
-            // 
-            this.timetableDataGridView.AllowUserToAddRows = false;
-            this.timetableDataGridView.AllowUserToDeleteRows = false;
-            this.timetableDataGridView.AllowUserToOrderColumns = true;
-            this.timetableDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.timetableDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.timetableDataGridView.BackgroundColor = System.Drawing.Color.White;
-            this.timetableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.timetableDataGridView.Location = new System.Drawing.Point(27, 216);
-            this.timetableDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.timetableDataGridView.Name = "timetableDataGridView";
-            this.timetableDataGridView.ReadOnly = true;
-            this.timetableDataGridView.RowHeadersVisible = false;
-            this.timetableDataGridView.RowTemplate.Height = 28;
-            this.timetableDataGridView.Size = new System.Drawing.Size(872, 222);
-            this.timetableDataGridView.TabIndex = 6;
-            // 
             // fromStationSearch
             // 
             this.fromStationSearch.BackColor = System.Drawing.Color.Transparent;
@@ -207,6 +188,25 @@
             this.toStationSearch.Size = new System.Drawing.Size(283, 132);
             this.toStationSearch.TabIndex = 1;
             // 
+            // timetableDataGridView
+            // 
+            this.timetableDataGridView.AllowUserToAddRows = false;
+            this.timetableDataGridView.AllowUserToDeleteRows = false;
+            this.timetableDataGridView.AllowUserToOrderColumns = true;
+            this.timetableDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timetableDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.timetableDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.timetableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.timetableDataGridView.Location = new System.Drawing.Point(27, 216);
+            this.timetableDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.timetableDataGridView.Name = "timetableDataGridView";
+            this.timetableDataGridView.ReadOnly = true;
+            this.timetableDataGridView.RowHeadersVisible = false;
+            this.timetableDataGridView.RowTemplate.Height = 28;
+            this.timetableDataGridView.Size = new System.Drawing.Size(872, 222);
+            this.timetableDataGridView.TabIndex = 6;
+            // 
             // StandardTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,9 +214,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.timetableDataGridView);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StandardTimetable";
             this.Size = new System.Drawing.Size(927, 455);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StandardTimetable_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timetableDataGridView)).EndInit();

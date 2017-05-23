@@ -37,9 +37,10 @@
             // standardTimetableButton
             // 
             this.standardTimetableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.standardTimetableButton.Location = new System.Drawing.Point(254, 21);
+            this.standardTimetableButton.Location = new System.Drawing.Point(169, 14);
+            this.standardTimetableButton.Margin = new System.Windows.Forms.Padding(2);
             this.standardTimetableButton.Name = "standardTimetableButton";
-            this.standardTimetableButton.Size = new System.Drawing.Size(247, 88);
+            this.standardTimetableButton.Size = new System.Drawing.Size(165, 57);
             this.standardTimetableButton.TabIndex = 0;
             this.standardTimetableButton.Text = "Standard Timetable";
             this.standardTimetableButton.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // stationFahrplanButton
             // 
             this.stationFahrplanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stationFahrplanButton.Location = new System.Drawing.Point(531, 21);
+            this.stationFahrplanButton.Location = new System.Drawing.Point(354, 14);
+            this.stationFahrplanButton.Margin = new System.Windows.Forms.Padding(2);
             this.stationFahrplanButton.Name = "stationFahrplanButton";
-            this.stationFahrplanButton.Size = new System.Drawing.Size(247, 88);
+            this.stationFahrplanButton.Size = new System.Drawing.Size(165, 57);
             this.stationFahrplanButton.TabIndex = 1;
             this.stationFahrplanButton.Text = "Timetable from a station";
             this.stationFahrplanButton.UseVisualStyleBackColor = true;
@@ -61,17 +63,19 @@
             this.userControlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlPanel.Location = new System.Drawing.Point(-8, 136);
+            this.userControlPanel.Location = new System.Drawing.Point(-5, 88);
+            this.userControlPanel.Margin = new System.Windows.Forms.Padding(2);
             this.userControlPanel.Name = "userControlPanel";
-            this.userControlPanel.Size = new System.Drawing.Size(1390, 700);
+            this.userControlPanel.Size = new System.Drawing.Size(927, 455);
             this.userControlPanel.TabIndex = 4;
             // 
             // searchStationsButton
             // 
             this.searchStationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchStationsButton.Location = new System.Drawing.Point(804, 21);
+            this.searchStationsButton.Location = new System.Drawing.Point(536, 14);
+            this.searchStationsButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchStationsButton.Name = "searchStationsButton";
-            this.searchStationsButton.Size = new System.Drawing.Size(247, 88);
+            this.searchStationsButton.Size = new System.Drawing.Size(165, 57);
             this.searchStationsButton.TabIndex = 2;
             this.searchStationsButton.Text = "Search stations nearby";
             this.searchStationsButton.UseVisualStyleBackColor = true;
@@ -79,17 +83,19 @@
             // 
             // OverviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1378, 838);
+            this.ClientSize = new System.Drawing.Size(919, 545);
             this.Controls.Add(this.searchStationsButton);
             this.Controls.Add(this.userControlPanel);
             this.Controls.Add(this.stationFahrplanButton);
             this.Controls.Add(this.standardTimetableButton);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OverviewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SBB Timetable 2.0";
+            this.Load += new System.EventHandler(this.OverviewForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -13,6 +13,11 @@ namespace SBB_Fahrplan_2._0
 {
     public partial class StationTimetable : UserControl
     {
+        public Button AcceptButton
+        {
+            get { return searchConnectionButton; }
+        }
+
         private Transport transport = new Transport();
         public StationTimetable()
         {

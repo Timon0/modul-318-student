@@ -58,6 +58,7 @@
             this.suggestionListBox.TabIndex = 1;
             this.suggestionListBox.TabStop = false;
             this.suggestionListBox.Visible = false;
+            this.suggestionListBox.VisibleChanged += new System.EventHandler(this.suggestionListBox_VisibleChanged);
             this.suggestionListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.suggestionListBox_KeyDown);
             this.suggestionListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.suggestionListBox_MouseDoubleClick);
             // 
